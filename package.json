@@ -1,0 +1,33 @@
+{
+  "name": "blockchain-connection-v1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "app": "node index.js",
+    "dev": "webpack -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "core-js": "^3.29.1",
+    "css-loader": "^6.7.3",
+    "dotenv": "^16.0.3",
+    "ethers": "^6.0.8",
+    "regenerator-runtime": "^0.13.11",
+    "style-loader": "^3.3.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.2",
+    "dotenv-webpack": "^8.0.1",
+    "prettier": "2.8.7",
+    "webpack": "^5.76.2",
+    "webpack-cli": "^5.0.1"
+  }
+}
