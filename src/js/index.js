@@ -69,15 +69,11 @@ export class App {
   // this method is responsible to process the transaction and teturn the
   // response from blockchain
   async transactionProcessing(signer) {
-    console.log('prevent default ok');
-    console.log('signer:', signer);
-
     const toWalletAddress = this.toWalletAddress.value;
     const transactionAmount = this.amount.value;
 
     try {
       if (toWalletAddress && transactionAmount) {
-        console.log('entrou no if');
         const validateFormData = new ValidateFormData(
           toWalletAddress,
           transactionAmount,
@@ -85,12 +81,10 @@ export class App {
         const isFormDataValid = validateFormData.validateData();
 
         if (!signer) {
-          console.log('signer não válido', signer);
           window.alert('Metamask is not connected');
           return;
         }
         if (isFormDataValid) {
-          console.log('form validado');
           const tx = new Transaction(
             signer,
             toWalletAddress,
